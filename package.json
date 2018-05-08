@@ -25,5 +25,9 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-html-beautify": "^1.0.1",
     "gulp-less": "^4.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
   }
 }
