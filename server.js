@@ -12,10 +12,15 @@ app.use(bodyParser.json());
 
 
 // Routes for Express
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   console.log(`App listening on port:${PORT}`);
 });
 
-app.get('/', function(req, res) {
-  res.send('Welcome to the HomePage of this server!');
+app.get('/', (req, res) => {
+//   res.send('Welcome to the HomePage of this server!');
+  res.sendFile(path.join(__dirname, 'home.html'));
+});
+app.get('/survey:file', (req, res) => {
+  res.sendFile(path.join(__dirname, 'survey.html'));
+
 });
