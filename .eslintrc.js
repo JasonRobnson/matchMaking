@@ -6,6 +6,7 @@ module.exports = {
     'space-before-function-paren': [0],
     'func-names': [0],
     'object-shorthand': [0],
-    'prefer-arrow-callback': [0]
+    'prefer-arrow-callback': [0],
+    "eslint linebreak-style": ["error", "windows"]
   } 
 };
