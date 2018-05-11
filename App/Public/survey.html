@@ -22,7 +22,7 @@
     <div class="header text-left">
 
         <a href="./home.html" id="homeSurveyButton" class="btn btn-info" role="button">Scared of somethign new? Ok, go home</a>
-        <!-- <div class="row">
+        <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-7">
                     <form class="form-inline">
@@ -39,7 +39,7 @@
                 </div>
                
 
-    </div> -->
+    </div>
     <div class="container">
         
         <div class="row">
@@ -48,7 +48,7 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">What is your Zodiac sign?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm"id="q1">
                                 <option data-value="1">Capricorn</option>
                                 <option data-value="2">Aquarius</option>
                                 <option data-value="3">Pisces</option>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Pick a color that you like?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm"id="q2">
                                 <option data-value="1">Black</option>
                                 <option data-value="2">Red</option>
                                 <option data-value="3">Yellow</option>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">On a Friday night you are?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q3">
                                 <option data-value="1">Poppin Bottles at the Club</option>
                                 <option data-value="2">Smooth Jazz and Candles</option>
                                 <option data-value="3">Reading a Book</option>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">You can only pick one?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q4">
                                 <option data-value="1">Hall and Oats</option>
                                 <option data-value="2">John Mayer</option>
                                 <option data-value="3">Bruno Mars</option>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">You can only pick one?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q5">
                                 <option data-value="1">Money</option>
                                 <option data-value="2">Love</option>
                                 <option data-value="3">Comfort</option>
@@ -107,7 +107,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">On a first date, during dinner you're having?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q6">
                                 <option data-value="1">Salad</option>
                                 <option data-value="2">Steak</option>
                                 <option data-value="3">Chicken</option>
@@ -117,7 +117,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tat's?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q7">
                                 <option data-value="1">Yay!</option>
                                 <option data-value="2">Nay!</option>
                                 <option data-value="3">Don't care!</option>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">What type of pet person would you prefer to date?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm " id="q8">
                                 <option data-value="1">Cats</option>
                                 <option data-value="2">Reptiles</option>
                                 <option data-value="3">Hamsters</option>
@@ -135,7 +135,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">You can only pick one drink?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q9">
                                 <option data-value="1">Water</option>
                                 <option data-value="2">Beer</option>
                                 <option data-value="3">Wine</option>
@@ -145,7 +145,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">At the door, end of the first date. You?</label>
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" id="q10">
                                 <option data-value="1">Kiss</option>
                                 <option data-value="2">Netflix and Chill</option>
                                 <option data-value="3">Turn the cheek</option>
@@ -153,7 +153,10 @@
                             </select>
                         </div>
 
-                        <a href="./home.html" id="submitSurveyButton" class="btn btn-info" role="button">Submit</a>
+                        <button id="submitSurveyButton" class="btn btn-info" role="button">
+
+                        </button>
+                        <!-- <a href="./home.html" id="submitSurveyButton" class="btn btn-info" role="button">Submit</a> -->
 
 
                     </form>
@@ -172,5 +175,37 @@
         crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </body>
+
+<script>
+
+        $("#submitSurveyButton").on("click",function(e){
+            e.preventDefault();
+            let newFriends = {
+                "name": $("#userName").val().trim(),
+                "email": $("#exampleInputEmail2").val().trim(),
+                // "photo": $("#userPhoto").val().trim(),
+                "scores": [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val(),
+
+                ]
+            }
+            let url = window.location.origin;
+            console.log(newFriends)
+                $.post(url+"/api/friends", newFriends,console.log("It posted"))
+                
+            console.log(newFriends)
+        })
+
+
+</script>
 
 </html>

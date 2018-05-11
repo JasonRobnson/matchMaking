@@ -18,3 +18,6 @@ let existingFriendsData = [
           ]
       }
 ]
+
+
+exports.existingFriendsData = existingFriendsData
