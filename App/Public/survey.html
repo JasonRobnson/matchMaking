@@ -31,10 +31,9 @@
                             <input type="text" class="form-control" id="userName" placeholder="your name">
                         </div>
                         <div class="form-group">
-                            <label for="UserEmail">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                            <label for="UserEmail"> Photo Link</label>
+                            <input type="link" class="form-control" id="exampleInputEmail2" placeholder="your photo link here">
                         </div>
-                        <button type="submit" class="btn btn-default" id="userValidSubmit">Submit</button>
                     </form>
                 </div>
                
@@ -45,6 +44,27 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div>
+                           <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header text-center ">
+                    <h4 class="modal-title">You're Match</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body text-center">
+              <p>The info of the match will be displayed here</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1"><b>What's your Zodiac sign?</b></label>
@@ -162,9 +182,7 @@
                             </select>
                         </div>
 
-                        <button id="submitSurveyButton" class="btn btn-info" role="button">
-
-                        </button>
+                        <button type ="button" id="submitSurveyButton" class="btn btn-info btn-lg" role="button" data-toggle="modal" data-target="#myModal">Submit!</button>
                         <!-- <a href="./home.html" id="submitSurveyButton" class="btn btn-info" role="button">Submit</a> -->
 
 
@@ -183,6 +201,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+  
+</div>
 </body>
 
 <script>
@@ -207,13 +228,15 @@
 
                 ]
             }
-            let $content = $('#friendMatch').detach();
-            modal.open({content: $content, width:340, height:300});
+            let url = window.location.origin;
             console.log(newFriends)
-                $.post(url+"/api/friends", newFriends,console.log("It posted"))
+                $.post(url+"/api/friends", newFriends)
+
                 
             console.log(newFriends)
         })
+      
+
 
 
 </script>
