@@ -93,35 +93,10 @@ let existingFriendsData = [
 ]
 
 
-  let  newFriendAdder = (newScore) => {
-      let result = 0;
-      for(i = 0; i < newScore.length; i++){
-        if(parseFloat(newScore[i])){
-            result += parseFloat(newScore[i]);
-            let newFriendFinalScore = result;
-            console.log(newFriendFinalScore)
-        }
-  }
-}
-
-let scanExistFriendsScore = (existingFriendsData) => {
-    // console.log("scanExistingFriends")
-    for (i = 0; i < existingFriendsData.length; i++){
-        newFriendAdder(existingFriendsData[i].scores);
-        friendsComparer(existingFriendsData[i], newFriendScore)
-    }
-}
-
-let friendsComparer = (existingFriendsScores, newFriendScores) => {
-    // console.log(existingFriendsData)
-}
-
 
 module.exports = {
     existingFriendsData,
     newFriendScore,
-    newFriendAdder,
-    scanExistFriendsScore
 }
 // exports.existingFriendsData = existingFriendsData
 // exports.newFriendScore = newFriendScore
