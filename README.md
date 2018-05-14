@@ -45,7 +45,7 @@ npm i path
 ## Testing
 
 `How to run the tests`
-You foremention node package managers. Then run the program by typing 'node server.js'
+Use the foremention node package managers. Then run the program by typing 'node server.js'
 
 After, type the localhost to reach the root HTML page. Then 'click' through to the survey. Then enter 'name' + 'photoLink', and complete survey. Then click 'submit'.
 
