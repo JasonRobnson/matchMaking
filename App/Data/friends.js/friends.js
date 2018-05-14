@@ -24,7 +24,7 @@ let existingFriendsData = [
       {
 
         "name":"Sarah",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://commons.wikimedia.org/wiki/File:Museum_of_Women_Art_Wikimedia_DC_Edit-o-thon_020_Edited.JPG",
         "scores":[
             11,
             2,

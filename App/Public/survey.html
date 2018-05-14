@@ -185,7 +185,7 @@
 </div>
 <div>
     <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog" id="resultsModal">
 <div class="modal-dialog">
 
 <!-- Modal content-->
@@ -196,7 +196,9 @@
 
 </div>
 <div class="modal-body text-center">
-<p>The info of the match will be displayed here</p>
+    <h2 id="matchName"></h2>
+<img id="matchImg" src="https://commons.wikimedia.org/wiki/File:Museum_of_Women_Art_Wikimedia_DC_Edit-o-thon_020_Edited.JPG" alt="">
+
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -229,9 +231,15 @@
 
                 ]
             }
+            //url = whatever window the survey loads on based on the windowObject properties
             let url = window.location.origin;
             console.log(newFriends)
-                $.post(url+"/api/friends", newFriends)
+                $.post(url+"/api/friends", newFriends, function(data){
+                    //modal attachments 
+                    $("#matchName").text(data.name)
+                    $("#matchImg").attr("src", data.photo)
+
+                 })
         })
       
 
