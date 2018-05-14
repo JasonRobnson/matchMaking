@@ -1,8 +1,7 @@
 
 let existingFriendsData = require("../Data/friends.js/friends.js")
 let newFriendScore = require("../Data/friends.js/friends.js")
-let newFriendListener = require("../Data/friends.js/friends.js")
-let friendsScoreAdder = require("../Data/friends.js/friends.js")
+let newFriendAdder= require("../Data/friends.js/friends.js")
 
 module.exports = (app,path) => {
 
@@ -32,15 +31,10 @@ module.exports = (app,path) => {
   
   existingFriendsData.existingFriendsData.push(newFriend)
   newFriendScore.newFriendScore.push(newFriend);
-  newFriendListener.newFriendListener(newFriendScore.newFriendScore);
-
-  // newFriendsScore.push(newFriend)
-    
-    
-    // reservedTables.push(newTable);
+  newFriendAdder.newFriendAdder(newFriend.scores);
+  // friendsScoreAdder.friendsScoreAdder(newFriendScore.newFriendScore.scores);
     res.json(newFriend);
     });
   
 }
 
-  

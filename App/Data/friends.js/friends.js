@@ -99,24 +99,34 @@ let existingFriendsData = [
     console.log(existingFriendsScores.reduce(reducer));
   }
 
-  let newFriendListener = (newFriendScore) => {
-    if (newFriendScore.length > 0) {
-        for(i=0; i < newFriendScore.length; i++){
-            console.log( newFriendScore[i]);
-            // friendsScoreAdder(newFriendScore[i].scores);
+ 
+  let splitter = (scoreArray) => {
+      
+  }
+
+  function newFriendAdder(newScore){
+      let result = 0;
+      for(i = 0; i < newScore.length; i++){
+        if(parseFloat(newScore[i])){
+            result += parseFloat(newScore[i]);
+            console.log(result)
         }
-    }
+  }
 }
 
+  let intergerMaker = (scoreArray) => {
+    for (let i = 0; i < scoreArray.length; i++) {
+       let newArray = pariseInt(scoreArray[i])
+       console.log(newArray)
+    }
+}
 
 
 
 module.exports = {
     existingFriendsData,
     newFriendScore,
-    newFriendListener,
-    friendsScoreAdder
+    newFriendAdder
 }
 // exports.existingFriendsData = existingFriendsData
 // exports.newFriendScore = newFriendScore
-console.log("This is from friends.js")
