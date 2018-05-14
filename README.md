@@ -3,10 +3,8 @@
 This project allows a user to take a survey, and based on that survey. They will be matched with a
 potential friend that shares some of the same interest. 
 
-My purpose in coding it.
-
-Was to get practice at my first Fullstack app. I hoped to combine all the small pieces of technology that I've learned
-so far, and merge them into a full functioning app. 
+My purpose for coding this was to get practice at my first Fullstack app. I hoped to combine all the
+ small pieces of technology that I've learned so far, and merge them into a full functioning app. 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
