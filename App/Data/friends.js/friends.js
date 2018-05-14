@@ -1,4 +1,8 @@
 
+
+
+
+ let newFriendScore = []
 let existingFriendsData = [
     {
 
@@ -88,5 +92,17 @@ let existingFriendsData = [
       
 ]
 
+ let friendsScoreAdder = (existingFriendsScores) => {
+    const  reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log(existingFriendsScores.reduce(reducer));
+}
+// let  newFriendScoreAdder = (newFriendScore) => {
+//     const  reducer = (accumulator, currentValue) => accumulator + currentValue;
+//     console.log(newFriendScoreAdder.reduce(reducer));
+
+// }
+friendsScoreAdder(existingFriendsData[1].scores);
 
 exports.existingFriendsData = existingFriendsData
+exports.newFriendScore = newFriendScore
+console.log("This is from friends.js")

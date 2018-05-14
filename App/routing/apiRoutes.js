@@ -1,5 +1,6 @@
 
 let existingFriendsData = require("../Data/friends.js/friends.js")
+let newFriendScore = require("../Data/friends.js/friends.js")
 module.exports = (app,path) => {
 
   // app.get("/api:friends?", (req, res) => {
@@ -21,8 +22,13 @@ module.exports = (app,path) => {
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
     // newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
     
+  
     console.log(newFriend);
   existingFriendsData.existingFriendsData.push(newFriend)
+  newFriendScore.newFriendScore.push(newFriend);
+  console.log(newFriendScore.newFriendScore)
+
+  // newFriendsScore.push(newFriend)
     
     
     // reservedTables.push(newTable);
