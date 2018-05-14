@@ -92,19 +92,8 @@ let existingFriendsData = [
       
 ]
 
-  // All these functions are suppose to be on the Friends.js page, ***Don't forget to get it there
 
-  let friendsScoreAdder = (existingFriendsScores) => {
-    const  reducer = (accumulator, currentValue) => accumulator + currentValue;
-    console.log(existingFriendsScores.reduce(reducer));
-  }
-
- 
-  let splitter = (scoreArray) => {
-      
-  }
-
-  function newFriendAdder(newScore){
+  let  newFriendAdder = (newScore) => {
       let result = 0;
       for(i = 0; i < newScore.length; i++){
         if(parseFloat(newScore[i])){
@@ -114,11 +103,8 @@ let existingFriendsData = [
   }
 }
 
-  let intergerMaker = (scoreArray) => {
-    for (let i = 0; i < scoreArray.length; i++) {
-       let newArray = pariseInt(scoreArray[i])
-       console.log(newArray)
-    }
+let scanExistFriendsScore = (existingFriendsData) => {
+    console.log("scanExistingFriends")
 }
 
 
@@ -126,7 +112,8 @@ let existingFriendsData = [
 module.exports = {
     existingFriendsData,
     newFriendScore,
-    newFriendAdder
+    newFriendAdder,
+    scanExistFriendsScore
 }
 // exports.existingFriendsData = existingFriendsData
 // exports.newFriendScore = newFriendScore
