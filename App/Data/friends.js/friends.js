@@ -2,7 +2,7 @@
 
 
 
- let newFriendScore = []
+ let newFriendScore = [""]
 let existingFriendsData = [
     {
 
@@ -92,17 +92,31 @@ let existingFriendsData = [
       
 ]
 
- let friendsScoreAdder = (existingFriendsScores) => {
+  // All these functions are suppose to be on the Friends.js page, ***Don't forget to get it there
+
+  let friendsScoreAdder = (existingFriendsScores) => {
     const  reducer = (accumulator, currentValue) => accumulator + currentValue;
     console.log(existingFriendsScores.reduce(reducer));
+  }
+
+  let newFriendListener = (newFriendScore) => {
+    if (newFriendScore.length > 0) {
+        for(i=0; i < newFriendScore.length; i++){
+            console.log( newFriendScore[i]);
+            // friendsScoreAdder(newFriendScore[i].scores);
+        }
+    }
 }
-// let  newFriendScoreAdder = (newFriendScore) => {
-//     const  reducer = (accumulator, currentValue) => accumulator + currentValue;
-//     console.log(newFriendScoreAdder.reduce(reducer));
 
-// }
-friendsScoreAdder(existingFriendsData[1].scores);
 
-exports.existingFriendsData = existingFriendsData
-exports.newFriendScore = newFriendScore
+
+
+module.exports = {
+    existingFriendsData,
+    newFriendScore,
+    newFriendListener,
+    friendsScoreAdder
+}
+// exports.existingFriendsData = existingFriendsData
+// exports.newFriendScore = newFriendScore
 console.log("This is from friends.js")

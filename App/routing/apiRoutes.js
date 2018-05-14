@@ -1,6 +1,9 @@
 
 let existingFriendsData = require("../Data/friends.js/friends.js")
 let newFriendScore = require("../Data/friends.js/friends.js")
+let newFriendListener = require("../Data/friends.js/friends.js")
+let friendsScoreAdder = require("../Data/friends.js/friends.js")
+
 module.exports = (app,path) => {
 
   // app.get("/api:friends?", (req, res) => {
@@ -12,7 +15,11 @@ module.exports = (app,path) => {
     console.log("friends api page")
   })
 
-  
+
+
+
+
+/////ROUTES!!!
 
   app.post("/api/friends", (req, res) => {
     // req.body hosts is equal to the JSON post sent from the user
@@ -23,10 +30,9 @@ module.exports = (app,path) => {
     // newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
     
   
-    console.log(newFriend);
   existingFriendsData.existingFriendsData.push(newFriend)
   newFriendScore.newFriendScore.push(newFriend);
-  console.log(newFriendScore.newFriendScore)
+  newFriendListener.newFriendListener(newFriendScore.newFriendScore);
 
   // newFriendsScore.push(newFriend)
     
